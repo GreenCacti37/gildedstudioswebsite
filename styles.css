@@ -63,7 +63,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('path-to-image.jpg') no-repeat center center/cover;
+    background: url('tempimg.jpg') no-repeat center center/cover;
     text-align: center;
     padding-top: 80px;
     background-attachment: fixed;
