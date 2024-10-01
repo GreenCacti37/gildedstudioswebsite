@@ -51,9 +51,10 @@ nav ul li a {
     position: relative;
 }
 
+/* Hover Effect for Header Links */
 nav ul li a:hover {
-    color: #ffdd00;
-    border-bottom: 2px solid #ffdd00; /* Adds the underline effect */
+    color: #ffdd00; /* Hover color */
+    border-bottom: 2px solid #ffdd00; /* Underline that matches hover color */
 }
 
 /* Hero Section */
@@ -105,7 +106,7 @@ nav ul li a:hover {
     margin: 20px 0;
 }
 
-/* Fancier Button */
+/* Fancy Buttons */
 .custom-button {
     background: linear-gradient(135deg, #ffdd00, #fbb034);
     padding: 15px 40px;
