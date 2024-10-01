@@ -46,11 +46,14 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
 }
 
 nav ul li a:hover {
     color: #ffdd00;
+    border-bottom: 2px solid #ffdd00; /* Adds the underline effect */
 }
 
 /* Hero Section */
