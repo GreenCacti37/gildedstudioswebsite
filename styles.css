@@ -74,6 +74,7 @@ nav ul li a:hover::after {
 /* Hero Section */
 .hero-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
