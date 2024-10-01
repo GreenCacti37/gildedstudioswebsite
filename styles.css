@@ -47,14 +47,28 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 5px 0;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
     position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Hover Effect for Header Links */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ffdd00; /* The same color as hover text */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect for Header Links with Smooth Underline */
 nav ul li a:hover {
-    color: #ffdd00; /* Hover color */
-    border-bottom: 2px solid #ffdd00; /* Underline that matches hover color */
+    color: #ffdd00;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands the underline smoothly */
 }
 
 /* Hero Section */
