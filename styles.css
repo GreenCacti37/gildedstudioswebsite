@@ -159,7 +159,7 @@ nav ul li a:hover::after {
 
 .custom-button:hover::before {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0.1);
 }
 
 /* Footer */
