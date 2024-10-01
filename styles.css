@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #fff;
     background-color: #1d1d1d;
+    overflow-x: hidden;
 }
 
 header {
@@ -19,11 +20,15 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 header .logo h1 {
-    font-size: 1.8em;
-    color: #ffbf00;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #ffbf00, #ffd700, #ffeb3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
 }
 
 nav ul {
@@ -39,10 +44,30 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #ffbf00;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffbf00;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .hidden {
@@ -57,11 +82,14 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .hero h2 {
     font-size: 3em;
     margin-bottom: 10px;
+    color: #ffd700;
+    animation: glow 2s infinite alternate;
 }
 
 .hero p {
@@ -75,6 +103,8 @@ nav ul li a:hover {
     text-align: center;
     background-color: #282828;
     margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .content h2 {
@@ -92,11 +122,38 @@ footer {
     text-align: center;
     padding: 20px;
     color: #fff;
+    animation: fadeIn 2s ease-in-out;
 }
 
 footer p {
     font-size: 1em;
     margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffbf00, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffeb3b;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffbf00, 0 0 30px #ffd700, 0 0 40px #ffeb3b, 0 0 50px #ffd700;
+    }
 }
 
 /* Responsive */
